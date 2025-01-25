@@ -42,7 +42,7 @@ function buildStyles() {
 }
 
 function buildHTML(){
-  return src('src/*.html')
+  return src(['src/**/*.html', '!src/parts/*.html'])
     .pipe(fileInclude({
       prefix: '@@',
       basepath: '@file'
